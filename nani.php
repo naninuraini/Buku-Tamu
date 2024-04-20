@@ -301,11 +301,11 @@ function checkTime(i) {
                 </div>
                 </div>
                 <label>Instansi</label> 
-                    <select id="prov" name="fprovinsi"> 
-                        <option value="Jawa Tengah">Universitas Lampung</option> 
-                        <option value="Jawa Barat">Universitas Bandar Lampung</option> 
-                        <option value="Jawa Timur">Institut Teknologi Sumatra</option>
-                    </select> 
+                    <select id="inst" name="finstansi"> 
+                        <option value="Universitas Lampung">Universitas Lampung</option> 
+                        <option value="Universitas Bandar Lampung">Universitas Bandar Lampung</option> 
+                        <option value="Institut Teknologi Sumatra">Institut Teknologi Sumatra</option>
+                    </select>
                 
                 <label>Pesan</label> 
                    <textarea name="fpesan"></textarea> 
@@ -317,19 +317,19 @@ function checkTime(i) {
 </div>
 </body> 
 <div> 
-            <?php if (isset($_POST['fnama'])){ 
+            <<?php if (isset($_POST['fnama'])){ 
                 $nama=$_POST['fnama']; 
                 $email=$_POST['femails']; 
-                $prov=$_POST['fprovinsi']; 
+                $inst=$_POST['finstansi']; 
                 $pesan=$_POST['fpesan'];
                 $t=time();
                 $tt=date("Y-m-d",$t);
             
                 echo "<h1>Daftar Tamu</h1>";
                 echo "<table id='tamu'>";
-                echo "<tr><th>Nama</th><th>Email</th><th>Provinsi</th><th>Pesan</th><th>Tanggal</th></tr>";
-                echo "<tr><td>$nama</td><td>$email</td><td>$prov</td><td>$pesan</td><td>$tt</td></tr>";
+                echo "<tr><th>Nama</th><th>Email</th><th>Instansi</th><th>Pesan</th><th>Tanggal</th></tr>";
+                echo "<tr><td>$nama</td><td>$email</td><td>$inst</td><td>$pesan</td><td>$tt</td></tr>";
             }
-            ?>
+            ?>
         </div> 
 </html>
