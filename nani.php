@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Buku Tamu Wedding :: Nani</title>
+<title>Buku Tamu Instansi :: Nani</title>
 <style>
     * {
          box-sizing: border-box;
@@ -282,9 +282,9 @@ function checkTime(i) {
 <div class="grid">
 <div class="card">
     <h1>Selamat Datang</h1>
-    <p>Di Nikahan Ziro & Zirro</p>
-    <h2>NIKAH DLU BARU KAWIN</h2>
-    <img src="ka.svg">
+    <p>Buku Tamu</p>
+    <h2>Universitas Lampung</h2>
+    <img src="c:c:\xampp\htdocs\Buku-Tamu\logo-unila.png">
 </div>
     <div class="buku-tamu">
     <h2>Buku Tamu</h2> 
@@ -330,6 +330,6 @@ function checkTime(i) {
                 echo "<tr><th>Nama</th><th>Email</th><th>Instansi</th><th>Pesan</th><th>Tanggal</th></tr>";
                 echo "<tr><td>$nama</td><td>$email</td><td>$inst</td><td>$pesan</td><td>$tt</td></tr>";
             }
-            ?>
+            ?>
         </div> 
 </html>
