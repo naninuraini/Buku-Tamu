@@ -166,6 +166,28 @@
         text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
     }
 
+    h3 {
+        color: white;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+        font-size: 0.7rem;
+    }
+
+    h4 {
+        color: white;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 1000;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+        font-size: 1.5rem;
+    }
+
     p {
         font-size: 0.8rem;
         color: white;
@@ -248,7 +270,8 @@
 <div class="circle2"></div>
 <div class="header"> 
         <div class="judul">
-        <img src="ww.svg">
+        <img src="book-open.svg">
+        <p>Hi! Selamat Datang, di E-Buku Tamu</p>
         </div>
         <div class="jam">
         <body onload="startTime()">
@@ -281,10 +304,11 @@ function checkTime(i) {
 
 <div class="grid">
 <div class="card">
-    <h1>Selamat Datang</h1>
-    <p>Buku Tamu</p>
-    <h2>Universitas Lampung</h2>
-    <img src="c:c:\xampp\htdocs\Buku-Tamu\logo-unila.png">
+    <img src="logo-unila.svg">
+    <h4>Universitas Lampung</h4>
+    <h3>Jl. Prof. Dr. Sumantri Brojonegoro No. 1 Bandar Lampung, 35145, INDONESIA.</h3>
+    <h3>Telp +62 721 702673 . Fax +62 721 702767</h3>
+    <h3>Email: humas@kpa.unila.ac.id</h3>
 </div>
     <div class="buku-tamu">
     <h2>Buku Tamu</h2> 
