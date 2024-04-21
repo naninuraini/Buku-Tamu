@@ -116,7 +116,6 @@
         align-items: center;
         border-radius: 5rem;
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-        padding: 20px;
     }
 
     .card img {
@@ -168,10 +167,13 @@
     }
 
     h3 {
-        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
+        color: white;
         text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
         font-size: 0.7rem;
     }
 
@@ -256,7 +258,7 @@
     #tamu th {
         padding-top: 12px;
         padding-bottom: 12px;
-        text-align: center;
+        text-align: left;
         /* background-color: #4CAF50; */
         color: white;
     }
@@ -309,44 +311,28 @@ function checkTime(i) {
     <h3>Email: humas@kpa.unila.ac.id</h3>
 </div>
     <div class="buku-tamu">
-    <h2>Buku Tamu</h2>
-<div>
-    <form method="POST" action="<?=$_SERVER['PHP_SELF'];?>">
-        <div class="one-form">
-            <div id="nama">
-                <label>Nama</label>
-                <input type="text" name="fnama" placeholder="Nama Lengkap..">
-            </div>
-            <div id="email">
-                <label>Email</label>
-                <input type="text" name="femails" placeholder="Email..">
-            </div>
-        </div>
-        <label>Instansi</label>
-        <select id="inst" name="finstansi" onchange="showInputField()">
-            <option value="Universitas Lampung">Universitas Lampung</option>
-            <option value="Universitas Bandar Lampung">Universitas Bandar Lampung</option>
-            <option value="Institut Teknologi Sumatra">Institut Teknologi Sumatra</option>
-            <option value="Politeknik Negeri Lampung">Politeknik Negeri Lampung</option>
-            <option value="Lainnya">Lainnya</option>
-        </select>
-        <input type="text" id="otherInst" name="otherInstansi" style="display: none;" placeholder="Masukkan nama instansi..">
-    <!-- </form>
-</div> -->
-
-<script>
-    function showInputField() {
-        var select = document.getElementById("inst");
-        var inputField = document.getElementById("otherInst");
-
-        if (select.value === "Lainnya") {
-            inputField.style.display = "block";
-        } else {
-            inputField.style.display = "none";
-        }
-    }
-</script>
-
+    <h2>Buku Tamu</h2> 
+        <div> 
+            <form method="POST" action="<?=$_SERVER['PHP_SELF'];?>">
+                <div class="one-form">
+                <div id="nama">
+                <label>Nama</label> 
+                    <input type="text" name="fnama" placeholder="Nama Lengkap.."> 
+                </div>
+                <div id="email">
+                <label>Email</label> 
+                    <input type="text" name="femails" placeholder="Email.."> 
+                </div>
+                </div>
+                <label>Instansi</label> 
+                    <select id="inst" name="finstansi"> 
+                        <option value="Universitas Lampung">Universitas Lampung</option> 
+                        <option value="Universitas Bandar Lampung">Universitas Bandar Lampung</option> 
+                        <option value="Institut Teknologi Sumatra">Institut Teknologi Sumatra</option>
+                        <option value="Politeknik Negeri Lampung">Politeknik Negeri Lampung</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                
                 <label>Pesan</label> 
                    <textarea name="fpesan"></textarea> 
                 
@@ -360,7 +346,7 @@ function checkTime(i) {
             <<?php if (isset($_POST['fnama'])){ 
                 $nama=$_POST['fnama']; 
                 $email=$_POST['femails']; 
-                $instansi=$_POST['finstansi'] == "Lainnya" ? $_POST['otherInstansi'] : $_POST['finstansi']; 
+                $inst=$_POST['finstansi']; 
                 $pesan=$_POST['fpesan'];
                 $t=time();
                 $tt=date("Y-m-d",$t);
@@ -368,7 +354,7 @@ function checkTime(i) {
                 echo "<h1>Daftar Tamu</h1>";
                 echo "<table id='tamu'>";
                 echo "<tr><th>Nama</th><th>Email</th><th>Instansi</th><th>Pesan</th><th>Tanggal</th></tr>";
-                echo "<tr><td>$nama</td><td>$email</td><td>$instansi</td><td>$pesan</td><td>$tt</td></tr>";
+                echo "<tr><td>$nama</td><td>$email</td><td>$inst</td><td>$pesan</td><td>$tt</td></tr>";
             }
             ?>
         </div> 
